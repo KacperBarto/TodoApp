@@ -1,0 +1,74 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="card-body">
+      <h4 class="card-title">My Todo list</h4>
+      <form [formGroup]="todoForm">
+        <div class="d-flex">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Add your new todo item..."
+            formControlName="description"
+          />
+          <button
+            class="btn btn-primary font-weight-bold"
+            [disabled]="todoForm.invalid"
+            (click)="addTodo()"
+          >
+            Add
+          </button>
+        </div>
+        <p
+          *ngIf="
+            !todoForm.get('description').valid &&
+            todoForm.get('description').dirty
+          "
+        >
+          This field is required!
+        </p>
+      </form>
+      <div
+        class="sda-list-wrapper"
+        *ngIf="todoList.length > 0; else emptyStateForTodoItems"
+      >
+        <ul class="d-flex flex-column">
+          <li *ngFor="let todo of todoList; let i = index; first as isFirst">
+            <div class="input-group mb-3" [ngClass]="{ 'mt-3': isFirst }">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="checkbox" [(ngModel)]="todo.isDone" />
+                </div>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="todo.description"
+                [ngClass]="{ 'item-done': todo.isDone }"
+                [disabled]="todo.isDone"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  (click)="removeTodo(todo.id, $event)"
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyStateForTodoItems>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">
+        No todo items!
+      </h1>
+    </div>
+  </div>
+</ng-template>
