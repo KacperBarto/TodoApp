@@ -6,9 +6,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { StudentsComponent } from './students/students.component';
 import { TodoComponent } from './todo/todo.component';
 import { SharedModule } from '../shared/shared.module';
+import { TodoItemComponent } from './todo/todo-item/todo-item.component';
 
 @NgModule({
-  declarations: [TodoComponent, StudentsComponent, PageNotFoundComponent],
+  declarations: [TodoComponent, StudentsComponent, PageNotFoundComponent, TodoItemComponent],
   exports: [TodoComponent, StudentsComponent, PageNotFoundComponent],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, SharedModule]
 })

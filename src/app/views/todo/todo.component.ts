@@ -38,14 +38,10 @@ export class TodoComponent implements OnInit {
   }
 
   private loadTodoList(): void {
-    this.todoService.getTodoList().then(result => {
-      this.todoList = result;
-      console.log(this.todoList);
-    });
+    this.todoService.getTodoList().then(result => this.todoList = result);
   }
 
-  removeTodo(id: number, ev: any): void {
-    ev.stopPropagation();
+  removeTodo(id: number): void {
     this.todoService.removeTodoItem(id).then(() => this.loadTodoList());
   }
 }
