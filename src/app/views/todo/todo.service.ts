@@ -18,7 +18,6 @@ export class TodoService {
     if (!Number.isFinite(id)) {
       id = 1;
     }
-    console.log('id', id);
 
     return Promise.resolve(
       this.todoList.push({

@@ -21,7 +21,8 @@ npm install --save bootstrap
 3. Pobranie jquery
 npm install --save jquery
 
-4. Dokonać aktualizacji pliku angular.json w celu przekazania odpowiednich plików Bootstrapa, które
+4. Sama instalacja nie jest jednak wystarczająca do rozpoczecia pracy z Bootstrapem w naszej aplikacji.
+Należy dokonać aktualizacji pliku angular.json w celu przekazania odpowiednich plików Bootstrapa, które
 wykorzystamy w projekcie.
 
 Znajdujemy sciezki:
@@ -76,6 +77,14 @@ W celu rozpoczecia korzystania z pliku ze stylami Bootstrapa, jquery oraz plikie
 22. Usuwanie wpisów z listy Todo.
 
 23. Empty state dla pustej listy Todo.
+
+24. Stworzenie komponentu nagłówka w SharedModule.
+
+25. Podczepienie komponentu nagłówka do istniejących widoku oraz przekazanie treści do nagłówka poprzez zastosowanie mechanizmu projekcji.
+
+26. Stworzenie komponentu TodoItem.
+
+27. Obsługa komunikacji rodzic-dziecko, dziecko-rodzic przy wykorzystaniu dekoratorów @Input oraz @Output.
 
 
 # SdaApp

@@ -36,11 +36,11 @@
       >
         <ul class="d-flex flex-column">
           <li *ngFor="let todo of todoList; let i = index; first as isFirst">
-            <app-todo-item 
-              [todo]="todo"  
-              [isFirst]="isFirst" 
-              (removeItem)="removeTodo($event)">
-            </app-todo-item>
+            <app-todo-item
+              [todo]="todo"
+              [isFirst]="isFirst"
+              (removeItem)="removeTodo($event)"
+            ></app-todo-item>
           </li>
         </ul>
       </div>

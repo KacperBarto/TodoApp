@@ -38,7 +38,7 @@ export class TodoComponent implements OnInit {
   }
 
   private loadTodoList(): void {
-    this.todoService.getTodoList().then(result => this.todoList = result);
+    this.todoService.getTodoList().then(result => (this.todoList = result));
   }
 
   removeTodo(id: number): void {
