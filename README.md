@@ -21,8 +21,7 @@ npm install --save bootstrap
 3. Pobranie jquery
 npm install --save jquery
 
-4. Sama instalacja nie jest jednak wystarczająca do rozpoczecia pracy z Bootstrapem w naszej aplikacji.
-Należy dokonać aktualizacji pliku angular.json w celu przekazania odpowiednich plików Bootstrapa, które
+4. Dokonać aktualizacji pliku angular.json w celu przekazania odpowiednich plików Bootstrapa, które
 wykorzystamy w projekcie.
 
 Znajdujemy sciezki:
