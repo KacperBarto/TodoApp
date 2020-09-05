@@ -1,0 +1,23 @@
+<div class="input-group mb-3" [ngClass]="{ 'mt-3': isFirst }">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="checkbox" [(ngModel)]="todo.isDone" />
+      </div>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="todo.description"
+      [ngClass]="{ 'item-done': todo.isDone }"
+      [disabled]="todo.isDone"
+    />
+    <div class="input-group-append">
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        (click)="removeTodo(todo.id, $event)"
+      >
+        Remove
+      </button>
+    </div>
+  </div>
